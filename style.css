@@ -4,6 +4,8 @@
     --success-color: #4caf50;
     --fail-color: #f44336;
 }
+
+
 body {
     display: flex;
     flex-direction: column;
