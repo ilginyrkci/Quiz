@@ -1,0 +1,103 @@
+:root {
+    --primary-color: var(--primary-color) #d81b60; 
+    --accent-color: var(--accent-color) #ffcdd2; 
+    --success-color: #4caf50;
+    --fail-color: #f44336;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--accent-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark, #333);
+    padding: 20px;
+}
+
+.quiz-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+#question-area {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#question-text {
+    font-size: 1.5em;
+    color: var(--text-dark, #333);
+    margin-bottom: 25px;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+}
+
+.option-button {
+    padding: 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Sonuç Alanı Stili */
+#result-area {
+    display: none;
+    padding-top: 20px;
+}
+
+#score-text {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: var(--success-color);
+}
+
+#result-message {
+    font-size: 1.2em;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+#restart-button {
+    margin-top: 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+#restart-button:hover {
+    background-color: #a30040;
+    color: white;
+}
+/* Gizli form, HTML'de kalmalıydı ama burada da görünüm olarak gizliyoruz */
+#email-form {
+    display: none; 
+}
